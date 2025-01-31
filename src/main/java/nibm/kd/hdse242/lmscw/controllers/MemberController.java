@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = "http://127.0.0.1:5501") // Allow frontend to access backend
 @RestController
 @RequestMapping("/lms/v1/members")
 public class MemberController {
@@ -27,7 +28,7 @@ public class MemberController {
     }
 
     @GetMapping("/{Id}")
-    public MemberDTO getBook(@PathVariable long Id) {
+    public MemberDTO getMember(@PathVariable long Id) {
         try {
             return memberService.getMember(Id);
         }catch(Exception e) {

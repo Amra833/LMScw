@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = "http://127.0.0.1:5501") // Allow frontend to access backend
 @RestController
 @RequestMapping("/lms/v1/books")
 public class BookController {

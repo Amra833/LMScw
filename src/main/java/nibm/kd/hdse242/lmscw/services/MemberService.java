@@ -42,6 +42,7 @@ public class MemberService {
             memberDTO.setId(member.getId());
             memberDTO.setName(member.getName());
             memberDTO.setEmail(member.getEmail());
+            memberDTO.setPhone(member.getPhone());
             memberDTOs.add(memberDTO);
         }
         return memberDTOs;
@@ -64,6 +65,7 @@ public class MemberService {
         //member.setId(memberDTO.getId());
         member.setName(memberDTO.getName());
         member.setEmail(memberDTO.getEmail());
+        member.setPhone(memberDTO.getPhone());
         memberRepository.save(member);
         return memberDTO;
     }
